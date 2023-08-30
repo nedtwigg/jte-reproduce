@@ -23,4 +23,10 @@ class ExampleTest {
         Assert.assertEquals("J", renderDynamic("example/RootJ.jte"))
         Assert.assertEquals("K", renderDynamic("example/RootK.kte"))
     }
+
+    @Test
+    fun nomixingWorks() {
+        Assert.assertEquals("I am J, and I need J", renderDynamic("example/J_needs_J.jte"))
+        Assert.assertEquals("I am K, and I need K", renderDynamic("example/K_needs_K.kte"))
+    }
 }
