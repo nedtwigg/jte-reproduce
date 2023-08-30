@@ -1,0 +1,14 @@
+plugins {
+    id 'gg.jte.gradle' version '3.0.3'
+    id 'org.jetbrains.kotlin.jvm' version '1.9.0'
+}
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    implementation "gg.jte:jte:3.0.3"
+    implementation "gg.jte:jte-runtime:3.0.3"
+    implementation "gg.jte:jte-kotlin:3.0.3"
+    testImplementation "junit:junit:4.13.2"
+}
