@@ -29,4 +29,14 @@ class ExampleTest {
         Assert.assertEquals("I am J, and I need J", renderDynamic("example/J_needs_J.jte"))
         Assert.assertEquals("I am K, and I need K", renderDynamic("example/K_needs_K.kte"))
     }
+
+    @Test
+    fun K_needs_J() {
+        Assert.assertEquals("I am K, but I need J", renderDynamic("example/K_needs_J.kte"))
+    }
+
+    @Test
+    fun J_needs_K() {
+        Assert.assertEquals("I am J, but I need K", renderDynamic("example/J_needs_K.kte"))
+    }
 }
