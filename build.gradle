@@ -1,14 +1,22 @@
-plugins {
-    id 'gg.jte.gradle' version '3.0.3'
-    id 'org.jetbrains.kotlin.jvm' version '1.9.0'
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("gg.jte:jte-gradle-plugin:3.0.4-SNAPSHOT")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0")
+    }
 }
-
+apply plugin: 'gg.jte.gradle'
+apply plugin: 'org.jetbrains.kotlin.jvm'
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 dependencies {
-    implementation "gg.jte:jte:3.0.3"
-    implementation "gg.jte:jte-runtime:3.0.3"
-    implementation "gg.jte:jte-kotlin:3.0.3"
+    implementation "gg.jte:jte:3.0.4-SNAPSHOT"
+    implementation "gg.jte:jte-runtime:3.0.4-SNAPSHOT"
+    implementation "gg.jte:jte-kotlin:3.0.4-SNAPSHOT"
     testImplementation "junit:junit:4.13.2"
 }
